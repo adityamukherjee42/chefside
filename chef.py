@@ -23,5 +23,6 @@ for i in liveorder:
         st.write("Dish name : "+str(record['Dish']) +' X ' + str(record['Quantity']))
     if st.button('Clear Final order {} '.format(i)):
         collection.delete_many({})
+        db[i].drop()
         st.write("Order cleared refresh to complete")
 
