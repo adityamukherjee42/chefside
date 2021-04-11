@@ -11,7 +11,7 @@ db = conn.Restaurent1
 
 st.title("Current Orders")
 
-liveorder=st.multiselect("The cuurent tables with live orders are ",db.list_collection_names())
+liveorder=st.multiselect("The current tables with live orders are ",db.list_collection_names())
 
 st.title("Dishes to be made are ")
 
