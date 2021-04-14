@@ -8,10 +8,15 @@ except:
     print("Could not connect to MongoDB")
 
 db = conn.Restaurent1
-
+result=[]
 st.title("Current Orders")
+for i in db.list_collection_names():
+    if i =='Feedback':
+        continue
+    else:
+        result.append(i)
 
-liveorder=st.multiselect("The current tables with live orders are ",db.list_collection_names())
+liveorder=st.multiselect("The current tables with live orders are ",result)
 
 st.title("Dishes to be made are ")
 
